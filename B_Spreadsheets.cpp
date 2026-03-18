@@ -38,14 +38,25 @@ void fast_io()
 #else
 #define debug(x)
 #endif
-
+bool checkForm(string str){
+    int n = str.size();
+    if( str[0] == 'R' ){
+        if( '0' <= str[1] && '9' >= str[1] ){
+            for( int i = 2 ; i < n ; i++ ){
+                if( str[i] == 'C' ) return true;
+            }
+        }
+    }
+    return false;
+}
 void solve()
 {
     string str;
     cin>>str;
     bool form = false;
     int n = str.size();
-    if( str[0] == 'R' && str[1] >= '0' && str[1] <= '9' ){
+
+    if( checkForm(str) ){
         string num1; 
         int num2 = 0;
         int i = 1;
