@@ -41,16 +41,7 @@ void fast_io()
 
 void solve()
 {
-    int a,b;
-    cin>>a>>b;
-    // cout<<1<<endl;
-    if( a < 2*b || a < 0 ) cout<<"NO\n";
-    // cout<<2<<endl;
-    else if( (a+b)%3 != 0 ) cout<<"NO\n";
-    // cout<<3<<endl;
-    else if( b < 0 && a < 4*(-b) ) cout<<"NO\n";
-    // cout<<4<<endl;
-    else cout<<"YES\n";
+
 }
 
 int main()
@@ -61,6 +52,5 @@ int main()
     cin >> t;
     while (t--)
         solve();
-
     return 0;
 }
